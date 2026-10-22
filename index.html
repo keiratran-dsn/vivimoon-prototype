@@ -1967,6 +1967,316 @@ main.enter{animation:pageIn .45s ease both}
 .m1co .c1-addr .tg{white-space:nowrap;display:inline-block;margin:4px 0 0}
 .m1co .c1-addr small{font-size:13px}
 /*C1CSS-END*/
+/*P1CSS-START*/
+/* ================= OPT1 · PDP ================= */
+.p1-crumb{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--n03);padding:20px 0;flex-wrap:wrap}
+.p1-crumb button{color:var(--n03);transition:color .15s}
+.p1-crumb button:hover{color:var(--n01)}
+.p1-crumb b{font-weight:400;color:var(--n01)}
+.p1-main{display:grid;grid-template-columns:88px minmax(0,616px) minmax(0,1fr);grid-template-rows:auto 1fr;gap:16px;align-items:start;padding-bottom:80px}
+.p1-ths{display:flex;flex-direction:column;gap:12px}
+.p1-ths button{width:88px;height:88px;position:relative;border:1px solid transparent;padding:3px;transition:border-color .2s}
+.p1-ths button:hover{border-color:var(--n04)}
+.p1-ths button.on{border-color:var(--n01)}
+.p1-ths img{width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.p1-ths img.lensonly{object-fit:contain;padding:0;background:var(--white)}
+.p1-ths span{position:absolute;inset:3px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--white);font-size:12px;background:rgba(0,0,0,.18);text-shadow:0 1px 4px rgba(0,0,0,.35)}
+.p1-mv{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--n06)}
+.p1-mv>img{width:100%;height:100%;object-fit:cover;animation:fade .35s}
+.p1-mv>img.lensonly{object-fit:contain;padding:16%;background:var(--white)}
+.p1-mv .hrt{position:absolute;right:16px;top:16px;width:34px;height:34px;border-radius:50%;background:var(--white);display:grid;place-items:center;transition:transform .15s}
+.p1-mv .hrt:hover{transform:scale(1.08)}
+.p1-mv .hrt.on svg,.p1-buy .hb.on svg,.p1-dc .hrt.on svg,.p1m-gal .hrt.on svg{fill:var(--red02);stroke:var(--red02)}
+.p1-mv .nv{position:absolute;bottom:16px;width:36px;height:36px;background:rgba(255,255,255,.9);display:grid;place-items:center;transition:background .2s}
+.p1-mv .nv:hover{background:var(--white)}
+.p1-mv .nv.l{left:16px}.p1-mv .nv.r{right:16px}
+.p1-mv .cnt{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:13px;color:var(--white);text-shadow:0 1px 4px rgba(0,0,0,.5)}
+.p1-mv .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center}
+.p1-tone{grid-column:2;margin-top:8px}
+.p1-tone .t{font-size:14px;margin-bottom:12px}
+.p1-tone .chips{display:flex;gap:8px;flex-wrap:wrap}
+.p1-tone button{height:32px;padding:0 12px;border:1px solid var(--n04);font-size:14px;transition:all .15s}
+.p1-tone button:hover{border-color:var(--n01)}
+.p1-tone button.on{background:var(--n01);border-color:var(--n01);color:var(--white)}
+.p1-info{grid-column:3;grid-row:1/span 2;padding-left:40px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.p1-bdg{display:flex;gap:6px;flex-wrap:wrap}
+.p1-bdg span{border:1px solid var(--n04);font-size:14px;padding:3px 8px;display:inline-flex;gap:6px;align-items:center}
+.p1-bdg span.k{background:var(--n01);color:var(--white);border-color:var(--n01)}
+.p1-info h1{font-family:var(--serif);font-weight:400;font-size:48px;line-height:1.1;margin:4px 0 0}
+.p1-sub{font-size:16px;color:var(--n02)}
+.p1-rate{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--n02);flex-wrap:wrap}
+.p1-rate .stars,.p1-score .stars{color:var(--n01);letter-spacing:2px}
+.p1-rate .sep{color:var(--n04)}
+.p1-price{font-size:30px;font-weight:500;display:flex;align-items:baseline;gap:10px;margin-top:4px}
+.p1-price small{font-size:15px;font-weight:300;color:var(--n02)}
+.p1-price .sale{align-self:center}
+.p1-promos{display:flex;flex-wrap:wrap;gap:8px}
+.p1-promos span{border:1px solid var(--n04);font-size:14px;padding:6px 12px;display:inline-flex;gap:8px;align-items:center}
+.p1-comfort{background:var(--bg2);padding:20px}
+.p1-comfort .h{display:flex;justify-content:space-between;align-items:center;font-size:16px}
+.p1-comfort .h .c1-link{font-size:14px;text-decoration:none}
+.p1-comfort .g{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.p1-comfort .g>div{display:flex;gap:10px;align-items:center}
+.p1-comfort i{width:36px;height:36px;border-radius:50%;background:var(--white);display:grid;place-items:center;flex:none;font-style:normal}
+.p1-comfort small{display:block;font-size:11px;color:var(--n02)}
+.p1-comfort b{font-weight:400;font-size:16px}
+.p1-lb{font-size:14px;color:var(--n02);display:flex;justify-content:space-between;align-items:center;margin-top:6px}
+.p1-lb b{color:var(--n01);font-weight:400}
+.p1-sw{display:flex;gap:14px}
+.p1-sw button{width:48px;height:48px;border-radius:50%;outline:1px solid transparent;outline-offset:3px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1);transition:outline-color .2s,transform .15s}
+.p1-sw button:hover{transform:scale(1.07)}
+.p1-sw button.on{outline-color:var(--n01)}
+.p1-pills{display:flex;gap:8px;flex-wrap:wrap}
+.p1-pills button{height:40px;padding:0 16px;border:1px solid var(--n04);font-size:15px;background:var(--white);transition:all .15s}
+.p1-pills button:hover:not(:disabled){border-color:var(--n01)}
+.p1-pills button.on{background:var(--n01);border-color:var(--n01);color:var(--white)}
+.p1-pills button:disabled{color:var(--n04);border-style:dashed;cursor:not-allowed;text-decoration:line-through}
+.p1-mini{font-size:11px;align-self:flex-start;color:var(--n02);margin-top:-6px}
+.p1-sel{appearance:none;-webkit-appearance:none;width:100%;height:48px;border:1px solid var(--n04);border-radius:0;padding:0 40px 0 16px;font-size:16px;color:var(--n01);background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%231a1a1a' stroke-width='1.2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 16px center;cursor:pointer;transition:border-color .2s}
+.p1-sel:hover{border-color:var(--n02)}
+.p1-sel:focus{outline:none;border-color:var(--n01)}
+.p1-lr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.p1-lr label{font-size:12px;color:var(--n02);display:block;margin-bottom:6px}
+.p1-note{font-size:12px;color:var(--n02);line-height:1.7;margin-top:-4px}
+.p1-note .mut,.p1-qty .mut{color:var(--n03)}
+.p1-qty{display:flex;align-items:center;gap:16px;font-size:14px;color:var(--n02);margin-top:6px}
+.c1-step.lg{grid-template-columns:44px 40px 44px;height:48px;font-size:16px}
+.p1-buy{display:grid;grid-template-columns:1fr 1fr 48px;gap:12px;margin-top:4px}
+.p1-buy .hb{width:48px;height:48px;border:1px solid var(--n01);display:grid;place-items:center;transition:background .2s}
+.p1-buy .hb:hover{background:var(--n06)}
+.p1-trust{display:grid;grid-template-columns:1fr 1fr;gap:16px;border-top:1px solid var(--n05);padding-top:16px;font-size:14px}
+.p1-trust>div{display:flex;gap:10px}
+.p1-trust small{display:block;font-size:11px;color:var(--n03)}
+.p1-pol{border:1px solid var(--n04);padding:16px 20px}
+.p1-pol .h{display:flex;justify-content:space-between;align-items:center;width:100%;font-weight:500;font-size:15px;text-align:left}
+.p1-pol .h span{display:flex;gap:8px;align-items:center}
+.p1-pol .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+.p1-pol.open .a{grid-template-rows:1fr}
+.p1-pol .a>div{overflow:hidden}
+.p1-pol ul{list-style:none;padding:0;margin:12px 0;display:flex;flex-direction:column;gap:8px;font-size:14px}
+.p1-pol li{display:flex;gap:8px;align-items:center}
+.p1-pol .lk{display:flex;gap:16px;padding-left:0}
+.p1-pol .lk .c1-link{font-size:13px;text-decoration:none}
+/* FAQ + spec */
+.p1-fs{background:var(--p02);padding:80px 0}
+.p1-fs .in{display:grid;grid-template-columns:minmax(0,1fr) 560px;gap:40px;align-items:start}
+.p1-faq h2{font-family:var(--serif);font-weight:400;font-size:36px;margin:20px 0 32px}
+.p1-faq .it{border-bottom:1px solid rgba(0,0,0,.12);padding:18px 0}
+.p1-faq .it button{display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;text-align:left;font-size:18px;font-weight:400}
+.p1-faq .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
+.p1-faq .open .a{grid-template-rows:1fr}
+.p1-faq .a>div{overflow:hidden;font-size:16px;color:var(--n02);line-height:1.6}
+.p1-faq .open .a>div{padding-top:12px}
+.p1-spec{background:var(--white);padding:32px}
+.p1-spec h3{font-family:var(--serif);font-weight:400;font-size:36px;margin:0 0 24px}
+.p1-spec .rw{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--n05);font-size:14px}
+.p1-spec .rw span:first-child{color:var(--n02);flex:none}
+.p1-spec .rw span:last-child{text-align:right}
+/* real eye */
+.p1-real,.p1-rel,.p1-rv{padding-top:80px;padding-bottom:80px}
+.p1-sh{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px}
+.p1-sh h2,.p1-rv h2{font-family:var(--serif);font-weight:400;font-size:48px;line-height:1.2;margin:0}
+.p1-sh p{color:var(--n02);font-size:14px;margin:12px 0 0}
+.p1-sh .c1-link{text-decoration:none;border-bottom:1px solid currentColor}
+.p1-rg{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.p1-rc{background:var(--n01);color:var(--white);padding:10px 10px 16px;text-align:left;display:block}
+.p1-rc .v{position:relative;aspect-ratio:252/408;overflow:hidden}
+.p1-rc .v>img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.p1-rc:hover .v>img{transform:scale(1.04)}
+.p1-rc .pl{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:var(--white);color:var(--n01);display:grid;place-items:center}
+.p1-rc .tag{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:var(--white);color:var(--n01);font-size:11px;padding:6px 8px;display:flex;gap:8px;align-items:center;white-space:nowrap;cursor:pointer}
+.p1-rc .tag i{width:24px;height:24px;background:var(--n06);display:block}
+.p1-rc .tag i img{width:100%;height:100%;object-fit:contain}
+.p1-rc .t{font-size:15px;margin-top:12px}
+.p1-rc small{font-size:13px;color:var(--n03);display:block;margin-top:8px}
+/* combo */
+.p1-combo{background:var(--p02);padding:80px 0}
+.p1-combo .bx{background:var(--white);padding:28px 32px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:40px}
+.p1-ci{display:flex;align-items:center;gap:12px;font-size:15px;text-align:left;transition:opacity .2s}
+.p1-ci.off{opacity:.45}
+.p1-ci img{width:56px;height:56px;border-radius:50%;object-fit:cover;background:var(--n06);box-shadow:0 2px 6px rgba(0,0,0,.1)}
+.p1-ci img.lensonly{object-fit:contain}
+.p1-ci small{display:block;color:var(--n02);font-size:12px;margin-top:4px}
+.p1-combo .pl{color:var(--n03);font-size:22px}
+.p1-combo .tot{margin-left:auto;text-align:right}
+.p1-combo .tot small{display:block;font-size:13px;color:var(--n02);margin-bottom:4px}
+.p1-combo .tot b{font-size:22px;font-weight:500}
+.p1-combo .tot s{color:var(--n03);font-size:12px;margin-left:6px}
+.p1-combo .tot .c1-btn{width:auto;margin-top:10px;height:44px;font-size:15px}
+/* reviews */
+.p1-rv .sub{color:var(--n02);font-size:16px;margin:12px 0 40px}
+.p1-rvg{display:grid;grid-template-columns:360px minmax(0,1fr);gap:56px;align-items:start}
+.p1-score{display:flex;gap:16px;align-items:center}
+.p1-score .big{font-family:var(--serif);font-size:80px;line-height:1}
+.p1-score .stars{font-size:18px;display:block;letter-spacing:4px}
+.p1-score small{display:block;color:var(--n02);font-size:14px}
+.p1-bars{margin:24px 0}
+.p1-bars>div{display:grid;grid-template-columns:28px 1fr 40px;gap:8px;align-items:center;font-size:13px;margin:8px 0}
+.p1-bars .bar{height:6px;background:var(--n05);position:relative}
+.p1-bars .bar i{position:absolute;inset:0 auto 0 0;background:var(--n01)}
+.p1-attr{background:var(--bg2);padding:16px 20px}
+.p1-attr div{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;color:var(--n02)}
+.p1-attr b{color:var(--n01);font-weight:400}
+.p1-rv .c1-btn.out{margin-top:24px}
+.p1-rv .p1-all{width:auto;padding:0 24px}
+.p1-rf{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--n04)}
+.p1-rf button{height:34px;padding:0 12px;border:1px solid var(--n04);font-size:15px;transition:all .15s}
+.p1-rf button:hover{border-color:var(--n01)}
+.p1-rf button.on{background:var(--n01);border-color:var(--n01);color:var(--white)}
+.p1-r{padding:24px 0;border-bottom:1px solid var(--n04);animation:pop .25s}
+.p1-r.empty{color:var(--n02);font-size:15px}
+.p1-r .who{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:center}
+.p1-r .av{width:40px;height:40px;border-radius:50%;background:var(--n05)}
+.p1-r b{font-weight:500;font-size:16px;display:block}
+.p1-r .st{font-size:13px;color:var(--n02)}
+.p1-r .tg{font-size:12px;color:var(--n02);margin:12px 0}
+.p1-r p{font-size:16px;margin:0 0 14px}
+.p1-r .ims{display:flex;gap:12px}
+.p1-r .ims span{width:80px;height:80px;border-radius:50%;overflow:hidden;position:relative;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.p1-r .ims img{width:100%;height:100%;object-fit:cover}
+.p1-r .ims i{position:absolute;inset:0;display:grid;place-items:center;color:var(--n01)}
+.p1-r .hp{display:inline-flex;gap:6px;align-items:center;font-size:14px;color:var(--n02);margin-top:14px;transition:color .15s}
+.p1-r .hp.on{color:var(--n01);font-weight:500}
+.p1-r .hp.on svg{fill:var(--n01)}
+/* related dark cards */
+.p1-dg{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.p1-dc{background:var(--n01);color:var(--white);padding:10px 10px 14px;display:flex;flex-direction:column;gap:6px}
+.p1-dc .ph{position:relative;aspect-ratio:1/1;overflow:hidden;cursor:pointer}
+.p1-dc .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.p1-dc:hover .ph img{transform:scale(1.05)}
+.p1-dc .hrt{position:absolute;right:10px;top:10px;width:30px;height:30px;border-radius:50%;background:var(--white);color:var(--n01);display:grid;place-items:center}
+.p1-dc .nm{font-size:15px;margin-top:8px;cursor:pointer}
+.p1-dc .sp,.p1-dc .cl,.p1-dc .st{font-size:13px;color:#bbb}
+.p1-dc .cl{display:flex;gap:4px;align-items:center;font-size:11px}
+.p1-dc .cl i{width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+.p1-dc .st{color:#ddd}
+.p1-dc .pr{font-size:17px;font-weight:500;display:flex;align-items:baseline;gap:6px}
+.p1-dc .pr small{font-size:11px;font-weight:300;color:#bbb}
+.p1-dc .add{margin-top:auto;height:38px;background:var(--white);color:var(--n01);display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;transition:background .2s}
+.p1-dc .add:hover{background:var(--p02)}
+/* mini cart */
+.scrim.mc1s{justify-content:flex-end;align-items:stretch}
+.mc1{width:480px;max-width:92%;background:var(--white);display:flex;flex-direction:column;animation:o2slide .3s cubic-bezier(.3,.7,.3,1)}
+.mc1.stay{animation:none}
+.scrim.closing .mc1{transition:transform .22s,opacity .22s;transform:translateX(40px);opacity:0}
+.mc1 .hd{display:flex;justify-content:space-between;align-items:center;padding:24px 24px 16px}
+.mc1 .hd h3{font-family:var(--serif);font-weight:400;font-size:30px;margin:0}
+.mc1 .bd{flex:1;overflow:auto;padding:0 24px 16px;display:flex;flex-direction:column;gap:16px}
+.mc1 .ok{background:var(--n01);color:var(--white);display:flex;gap:10px;align-items:center;padding:12px 16px;font-size:15px;animation:pop .3s}
+.mc1 .c1-prog{padding:14px 16px 12px}
+.mc1-li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;padding-bottom:20px;border-bottom:1px solid var(--n05);position:relative}
+.mc1-li.off>*{opacity:.6}
+.mc1-li .im{width:88px;height:88px;border-radius:50%;overflow:hidden;background:var(--n06);box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.mc1-li .im img{width:100%;height:100%;object-fit:cover}
+.mc1-li .im img.lensonly{object-fit:contain}
+.mc1-li .t{font-size:16px;padding-right:28px}
+.mc1-li .sels{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.mc1-li .ft{display:flex;justify-content:space-between;align-items:center}
+.mc1-li .p{font-weight:500;font-size:16px}
+.mc1-li .del{position:absolute;right:0;top:0;color:var(--n02)}
+.mc1-li .del:hover{color:var(--red02)}
+.mc1-li small.off{display:block;font-size:11px;color:var(--n03);margin-top:6px}
+.mc1 h4{font-weight:400;font-size:16px;margin:4px 0 0}
+.mc1-up{display:grid;grid-template-columns:56px 1fr 34px;gap:12px;align-items:center;border:1px solid var(--n04);padding:12px}
+.mc1-up img{width:56px;height:56px;border-radius:50%;object-fit:contain;background:var(--n06)}
+.mc1-up .t{font-size:15px}
+.mc1-up small{display:block;color:var(--n02);font-size:13px;margin-top:2px}
+.mc1-up .plus{width:34px;height:34px;border:1px solid var(--n01);display:grid;place-items:center;transition:background .2s,color .2s}
+.mc1-up .plus:hover{background:var(--n01);color:var(--white)}
+.mc1 .mft{border-top:1px solid var(--n05);padding:20px 24px 24px;display:flex;flex-direction:column;gap:10px}
+.mc1 .mft .row{display:flex;justify-content:space-between;font-size:17px}
+.mc1 .mft b{font-weight:500}
+.mc1 .mft small{font-size:12px;color:var(--n03)}
+/* mobile PDP */
+.p1m .p1-crumb{padding:14px 16px;font-size:13px;gap:6px}
+.p1m-gal{position:relative}
+.p1m-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.p1m-track::-webkit-scrollbar{display:none}
+.p1m-track>div{flex:0 0 100%;aspect-ratio:1/1;scroll-snap-align:start;background:var(--n06)}
+.p1m-track img{width:100%;height:100%;object-fit:cover}
+.p1m-track img.lensonly{object-fit:contain;padding:14%;background:var(--white)}
+.p1m-track img.ban{object-fit:contain;background:#0b1530}
+.p1m-gal .hrt{position:absolute;right:12px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--white);display:grid;place-items:center;z-index:2}
+.p1m-gal .lc{position:absolute;left:12px;bottom:14px;display:flex;flex-direction:column;gap:4px;color:var(--white);font-weight:600;font-size:14px;z-index:2;text-shadow:0 1px 6px rgba(0,0,0,.5);pointer-events:none}
+.p1m-gal .lc img{width:46px;height:46px;border-radius:50%;border:2px solid var(--white);object-fit:cover;background:var(--white)}
+.p1m-gal .cnt{position:absolute;right:12px;bottom:16px;background:var(--white);border-radius:999px;font-size:12px;padding:2px 10px;z-index:2}
+.p1m-ths{display:flex;gap:8px;padding:8px 16px;overflow-x:auto;scrollbar-width:none}
+.p1m-ths::-webkit-scrollbar{display:none}
+.p1m-ths button{flex:0 0 56px;height:56px;border:1px solid transparent;overflow:hidden;padding:1px;transition:border-color .2s}
+.p1m-ths button.on{border:2px solid var(--n01)}
+.p1m-ths img{width:100%;height:100%;object-fit:cover}
+.p1m-info{padding:8px 16px 16px}
+.p1m-info h1{font-family:var(--serif);font-weight:400;font-size:28px;margin:6px 0 8px}
+.p1m-info .code{font-size:12px;color:var(--n02)}
+.p1m-info .sp{font-size:14px;color:var(--n02);margin-top:6px}
+.p1m-info .pr{display:flex;align-items:center;gap:8px;margin-top:8px}
+.p1m-info .pr b{font-size:26px;font-weight:400}
+.p1m-info .pr small{font-size:15px;color:var(--n02)}
+.p1m-pw{border-top:1px solid var(--n05);margin:0 16px;padding:16px 0 20px}
+.p1m-pw .h{display:flex;justify-content:space-between;align-items:center;width:100%;font-size:15px}
+.p1m-pw .row{display:flex;gap:8px;overflow-x:auto;margin:12px -16px 0 0;padding-right:16px;scrollbar-width:none}
+.p1m-pw .row::-webkit-scrollbar{display:none}
+.p1m-pw .row button{flex:none;min-width:44px;height:30px;padding:0 10px;background:var(--n06);font-size:13px;transition:background .15s}
+.p1m-pw .row button:active{background:var(--n05)}
+.p1m-pw .row button:disabled{color:var(--n04);text-decoration:line-through}
+.p1m-gift{margin:0 16px 24px;border:1px solid var(--p01)}
+.p1m-gift .h{background:var(--p01);color:var(--white);font-size:13px;padding:6px 12px;display:flex;gap:8px;align-items:center}
+.p1m-gift .b{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:10px 12px;align-items:center}
+.p1m-gift img{width:96px;height:72px;object-fit:cover}
+.p1m-gift ul{list-style:none;margin:0;padding:0;font-size:13px;display:flex;flex-direction:column;gap:4px}
+.p1m-gift li:before{content:"☾";color:var(--n02);margin-right:6px}
+.p1m-desc{background:var(--n06);padding:24px 16px}
+.p1m-desc h2{font-size:16px;font-weight:600;margin:0 0 12px}
+.p1m-st{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.p1m-st>div{background:var(--white);text-align:center;padding:8px 4px;font-size:12px;color:var(--n02)}
+.p1m-st b{display:block;color:var(--n01);font-weight:400;font-size:15px;margin-top:2px}
+.p1m-desc .ph{margin:12px 0 4px;aspect-ratio:343/140;overflow:hidden}
+.p1m-desc .ph img{width:100%;height:100%;object-fit:cover}
+.p1m-tb>div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--n05);font-size:13px}
+.p1m-tb span:first-child{color:var(--n02);flex:none;width:92px}
+.p1m-tb span:last-child{text-align:right}
+.p1m-desc h3{font-size:15px;font-weight:600;margin:20px 0 8px}
+.p1m-desc .txt{font-size:13px;line-height:1.6;max-height:84px;overflow:hidden;position:relative}
+.p1m-desc .txt:after{content:"";position:absolute;left:0;right:0;bottom:0;height:36px;background:linear-gradient(transparent,var(--n06))}
+.p1m-desc.more .txt{max-height:none}
+.p1m-desc.more .txt:after{display:none}
+.p1m-desc .btnc{display:flex;justify-content:center;margin-top:12px}
+.p1m-desc .btnc button{border:1px solid var(--n01);height:34px;padding:0 18px;font-size:13px;background:var(--white)}
+.p1m .m1-ban img{aspect-ratio:375/142}
+.p1m-faq{background:var(--n06);padding:24px 16px}
+.p1m-faq .cd{background:var(--white);border-radius:16px;padding:4px 16px}
+.p1m-faq .it{padding:16px 0}
+.p1m-faq .it:last-child{border-bottom:0}
+.p1m-faq .it button{font-size:15px}
+.p1m-faq .a>div{font-size:13px}
+.p1m-vid{padding:32px 0 24px;text-align:center}
+.p1m-vid h2{font-family:var(--serif);font-weight:400;font-size:24px;margin:0 16px 8px}
+.p1m-vid p{font-size:13px;color:var(--n02);margin:0 24px}
+.p1m-vid .track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 16px;scroll-padding:0 16px;margin:16px 0;scrollbar-width:none}
+.p1m-vid .track::-webkit-scrollbar{display:none}
+.p1m-vid .v{flex:0 0 280px;aspect-ratio:280/400;position:relative;scroll-snap-align:start;overflow:hidden}
+.p1m-vid .v img{width:100%;height:100%;object-fit:cover}
+.p1m-vid .pl{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.75);display:grid;place-items:center}
+.p1m-rel{padding:24px 16px 32px}
+.p1m-rel h2{font-family:var(--serif);font-weight:400;font-size:22px;margin:0 0 16px;text-align:center}
+.p1m-rel .gr{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.p1-bar{position:absolute;left:0;right:0;bottom:0;z-index:80;background:var(--white);box-shadow:0 -8px 24px rgba(0,0,0,.08);padding:10px 16px 14px;display:grid;grid-template-columns:1fr 1fr;gap:12px;animation:barIn .35s cubic-bezier(.2,.8,.3,1) both}
+.p1-bar button{height:48px;font-size:17px;transition:filter .2s,transform .12s}
+.p1-bar button:active{transform:scale(.98)}
+.p1-bar .ol{border:1px solid var(--p01);color:var(--p01);background:var(--white)}
+.p1-bar .gd{background:var(--p01);color:var(--white)}
+.p1-bar .gd:hover{filter:brightness(1.07)}
+#frame.has-bar.sm #scroller{padding-bottom:76px}
+#frame.has-bar.sm .toast{bottom:88px}
+.p1-sht .hd{display:flex;justify-content:flex-end;margin:0 0 4px}
+.p1-sht .qa-pr{color:var(--p01)}
+.p1-sht .m1-gbtn{margin-top:12px}
+@container app (max-width: 860px){
+  .hdr .tabs{transition:none}
+  .hdr.compact .tabs{display:none}
+  .p1 .p1-main{grid-template-columns:1fr}
+}
+/*P1CSS-END*/
 /*O2ADD-START*/
 .o2 .qrbox{position:relative}
 .o2 .qrbox .q{position:relative;width:224px;height:224px;margin:0 auto;animation:qrIn .5s ease both}
@@ -2302,7 +2612,7 @@ function home(){
 
   <section class="sec wrap">
     <div class="sec-head" style="justify-content:center"><h2 class="h-xl" style="text-align:center">Sản phẩm mới</h2></div>
-    <div class="carousel"><div class="track" id="newTrack">${NEWP.map(id=>{const p=byId[id],m=newImgs[id];return `<article class="np"><div class="ph"><img src="${src(`${m[0]}.jpg`)}" alt=""></div><div class="lc"><img src="${src(`${m[1]}.png`)}" alt=""></div><div class="nm">${fullName(p)}</div><div class="sp">${m[2]} • ${m[3]}</div><div class="bt"><button class="btn-line" data-act="pdp">Chi tiết</button><button class="btn-gold" data-act="qa" data-v="${id}">${I('plus','s16')} Thêm vào giỏ</button></div></article>`}).join('')}</div></div>
+    <div class="carousel"><div class="track" id="newTrack">${NEWP.map(id=>{const p=byId[id],m=newImgs[id];return `<article class="np"><div class="ph"><img src="${src(`${m[0]}.jpg`)}" alt=""></div><div class="lc"><img src="${src(`${m[1]}.png`)}" alt=""></div><div class="nm">${fullName(p)}</div><div class="sp">${m[2]} • ${m[3]}</div><div class="bt"><button class="btn-line" data-act="pdp" data-v="${id}">Chi tiết</button><button class="btn-gold" data-act="qa" data-v="${id}">${I('plus','s16')} Thêm vào giỏ</button></div></article>`}).join('')}</div></div>
     <div class="ctr"><div class="arrows"><button class="ar" data-act="scroll" data-t="newTrack" data-v="-1" aria-label="Trước">${I('left','s16')}</button><div class="dots"><i class="on"></i><i></i><i></i><i></i></div><button class="ar" data-act="scroll" data-t="newTrack" data-v="1" aria-label="Sau">${I('right','s16')}</button></div>
     <button class="btn-gold btn-xs" data-act="sortgo" data-v="new">Xem tất cả</button></div>
   </section>
@@ -2344,8 +2654,8 @@ function filterGroups(){
 }
 function card(p){
   const im=imgFor(p,S.view), lz=imgFor(p,'eye'), fav=S.fav.has(p.id);
-  return `<article class="card"><div class="ph"><img src="${src(`${im.src}`)}" class="${im.cls}" alt="${p.nm}" loading="lazy">${S.view!=='eye'&&p.eye?`<img src="${src(`${lz.src}`)}" class="alt ${lz.cls}" alt="" aria-hidden="true" loading="lazy">`:''}<button class="heart ${fav?'on':''} ${S.anim.heart===p.id?'pop':''}" data-act="fav" data-v="${p.id}" aria-label="Yêu thích" aria-pressed="${fav}">${I('heart')}</button></div>
-  <div class="nm">${p.nm}</div><div class="sp">${specs(p)}</div>
+  return `<article class="card"><div class="ph" data-act="p1go" data-v="${p.id}" style="cursor:pointer"><img src="${src(`${im.src}`)}" class="${im.cls}" alt="${p.nm}" loading="lazy">${S.view!=='eye'&&p.eye?`<img src="${src(`${lz.src}`)}" class="alt ${lz.cls}" alt="" aria-hidden="true" loading="lazy">`:''}<button class="heart ${fav?'on':''} ${S.anim.heart===p.id?'pop':''}" data-act="fav" data-v="${p.id}" aria-label="Yêu thích" aria-pressed="${fav}">${I('heart')}</button></div>
+  <div class="nm" data-act="p1go" data-v="${p.id}" style="cursor:pointer">${p.nm}</div><div class="sp">${specs(p)}</div>
   <div class="pr">${vnd(p.price)}${p.sale?`<span class="sale">-${p.sale}%</span>`:''}</div>
   <button class="btn-gold" data-act="qa" data-v="${p.id}">Thêm vào giỏ</button></article>`;
 }
@@ -2721,9 +3031,10 @@ function mBarInner(co,open){
   <button class="m1-gbtn" data-act="${co?'c1place':'c1checkout'}" ${s?'':'disabled'}>${co?'Đặt hàng':'Mua hàng'}</button>${!s&&!co?`<div class="c1-hint">Chọn ít nhất 1 sản phẩm để mua hàng</div>`:''}`;
 }
 function renderBar(){
-  const on=S.opt===1&&isMob()&&((S.page==='cart'&&C.cart.length>0)||S.page==='checkout');
-  document.getElementById('frame').classList.toggle('has-bar',on);
-  barLayer.innerHTML=on?`<div class="m1-bar">${mBarInner(S.page==='checkout',false)}</div>`:'';
+  const fr=document.getElementById('frame'),mob=S.opt===1&&isMob();
+  const cart=mob&&((S.page==='cart'&&C.cart.length>0)||S.page==='checkout'),pd=mob&&S.page==='pdp';
+  fr.classList.toggle('has-bar',cart||pd);fr.classList.toggle('sm',pd);
+  barLayer.innerHTML=cart?`<div class="m1-bar">${mBarInner(S.page==='checkout',false)}</div>`:pd?p1Bar():'';
 }
 function sumSheet(){
   const co=S.page==='checkout',sv=co?cSave():cPD()+cVD();
@@ -2883,6 +3194,184 @@ function dockCtx(){
 }
 /*C1JS-END*/
 
+/*P1JS-START*/
+/* ================= OPT1 · CHI TIẾT SẢN PHẨM (Figma 503:2799) ================= */
+Object.assign(ACC1,{
+  nuoc15c:{nm:'Nước nhỏ mắt 15ml · giá combo',price:53000,img:'o2_lensA.png',vol:'Dung tích 15ml',ph:'makeup_3'},
+  gapc:{nm:'Dụng cụ gắp lens · giá combo',price:27000,img:'o2_lensB.png',vol:'Tiêu chuẩn',ph:'mimg_3'}
+});
+Object.assign(ic,{drop:'<path d="M12 3.5s-6 6.6-6 11a6 6 0 0 0 12 0c0-4.4-6-11-6-11z"/>',thumb:'<path d="M7 11v9H4v-9zM7 11l4-7c1.5 0 2.5 1 2.2 2.6L12.7 10H18a2 2 0 0 1 2 2.3l-1.1 6A2 2 0 0 1 17 20H7"/>'});
+const EYEP={sandkiss:'o2_sandkiss',shadow:'o2_shadow',golden:'o2_golden',olive:'o2_olive',clear:'o2_clear'};
+const CDOT={Nâu:'#8a5a3b',Đen:'#2a2523',Xám:'#9aa0a6','Sặc sỡ':'#7fa7c9','Trong suốt':'#ece9e4'};
+const SW1=[['sandkiss','#8a5a3b'],['sweetie','#3a2a22'],['savage','#9aa0a6'],['golden','#c9a27a'],['jade','#7fa7c9']];
+const TONES=[['Hồng đào','makeup_1'],['Cam đất','makeup_2'],['Nude ấm','makeup_0'],['Dưới nắng','o2_comfort'],['Trong nhà',null]];
+const eyeOf=p=>({src:(p.eye||EYEP[p.id]||'meye_0')+'.jpg',cls:''});
+function pGal(p){return [{...imgFor(p,'lens'),lab:''},{src:p.img+'.jpg',cls:'',lab:'Người mẫu'},{...eyeOf(p),lab:'Cận mắt'},{src:'o2_comfort.jpg',cls:'',lab:'Dưới nắng'},{src:'o2_tv1.jpg',cls:'',lab:'Video',video:1}]}
+const pCode=p=>`KAT_VVM_${p.id.slice(0,4).toUpperCase()}_${p.dur.replace(/\D/g,'')}${p.dur.includes('ngày')?'D':'M'}`;
+const pWater=p=>p.line==='Khoá ẩm'?'45%':'40%', pHours=p=>p.line==='Khoá ẩm'?'12 giờ/ngày':'8 giờ/ngày';
+const pMax=p=>pmax(p).toFixed(2);
+function p1State(id){const L=S.f.L?toV(S.f.L):'0.00',R=S.f.R?toV(S.f.R):L;
+  return {id,img:1,tone:null,mode:'chiec',P:L,L,R,qty:1,faq:0,policy:true,rf:0,helpful:new Set(),more:false,combo:{lens:true,nuoc15:true,gap:true},mp:S.f.L||'0',sheet:null,slide:0}}
+function p1Open(id){if(!byId[id])id='sandkiss';S.pdp=p1State(id);S.overlay=null;go('pdp')}
+const pUnit=()=>{const q=S.pdp,p=byId[q.id];return p.price*(q.mode==='doi'?2:1)};
+const pLineD=()=>{const q=S.pdp;const R=q.R==='same'?q.L:q.R;return q.mode==='doi'?{id:q.id,mode:'doi',L:q.L,R,qty:q.qty}:{id:q.id,mode:'chiec',P:q.P,qty:q.qty}};
+const pLineM=()=>{const q=S.pdp,v=toV(q.mp);return q.mode==='doi'?{id:q.id,mode:'doi',L:v,R:v,qty:q.qty}:{id:q.id,mode:'chiec',P:v,qty:q.qty}};
+const lineLbl=l=>`${byId[l.id].nm} (${l.mode==='doi'?(l.L===l.R?(l.L==='0.00'?'đôi · không độ':'đôi · '+l.L):`L ${l.L} · R ${l.R}`):(l.P==='0.00'?'Không độ':l.P)})`;
+const FAQ1=[['Đeo có cộm, khô mắt không?','Dòng khoá ẩm dùng MPC + Silicone Hydrogel, độ ngậm nước 45%, tạo màng giữ ẩm giúp đeo êm cả ngày. Người mới nên đeo 4–6 giờ những ngày đầu rồi tăng dần 2 giờ/ngày.'],['Đeo được bao lâu mỗi ngày?','Tối đa 12 giờ/ngày với dòng khoá ẩm, 8 giờ/ngày với dòng mắt thở. Tháo lens trước khi ngủ và ngâm trong nước ngâm chuyên dụng.'],['Mắt nhạy cảm có dùng được không?','Có. Chất liệu Silicone Hydrogel cho oxy đi qua tốt, hợp mắt nhạy cảm, dễ khô. Nếu mắt đỏ hoặc cộm, hãy tháo lens và nghỉ ngơi.'],['Người mới có khó đeo không?','Không khó. Vivimoon có video hướng dẫn đeo – tháo từng bước, và tặng dụng cụ gắp lens cho đơn đầu tiên.'],['Mặt trong/mặt ngoài phân biệt thế nào?','Đặt lens lên đầu ngón tay: mặt đúng có dạng bát tròn, mép hướng lên. Nếu mép loe ra ngoài là đang bị lộn mặt.']];
+const SPEC1=p=>[['Đường kính (DIA)',p.dia],['Đường kính màu (GDIA)',p.gdia?p.gdia+'mm · giãn nhẹ':'Trong suốt'],['Độ cong (BC)','8.7mm'],['Độ ngậm nước',pWater(p)],['Chất liệu','MPC + Silicone Hydrogel'],['Hạn sử dụng',p.dur+' kể từ ngày mở vỉ'],['Độ cận có sẵn',`0 → -${pMax(p)} · bán lẻ từng mắt`],['Xuất xứ','Hàn Quốc'],['Số giấy phép','ISO 13485 · Bộ Y tế · xem chứng nhận'],['Hiệu ứng khi đeo','Mắt ấm áp, ngọt ngào, không lộ viền'],['Phong cách gợi ý',(p.mk||[]).join(', ')||'Makeup hồng đào, cam đất, nude ấm']];
+const RV1=[{n:'Thu Hà',tg:'Độ -2.50 · Đeo 9h · Mắt thường',t:'Đeo 9 tiếng đi làm, không khô, màu lên mắt nâu nhẹ rất tự nhiên đúng như ảnh cận mắt. Sẽ mua lại.',f:[1,3,5],im:[3,6,5]},{n:'Minh Anh',tg:'Không độ · Người mới · Mắt nhạy cảm',t:'Lần đầu đeo lens, xem video hướng dẫn trên web là đeo được luôn. Hơi cộm 5 phút đầu, sau đó êm.',f:[1,2,4],im:[6,7,8]}];
+const RF1=['Tất cả','Có ảnh/video (1.074)','Mắt nhạy cảm','Đeo cả ngày','Người mới đeo','Người cận'];
+const stars=n=>'★★★★★'.slice(0,n);
+function pRelated(p){return P.filter(x=>x.id!==p.id&&x.color===p.color).concat(P.filter(x=>x.id!==p.id&&x.color!==p.color)).slice(0,4)}
+function dCard(x){const fav=S.fav.has(x.id);return `<article class="p1-dc"><div class="ph" data-act="p1go" data-v="${x.id}"><img src="${src(x.img+'.jpg')}" alt="${x.nm}" loading="lazy"><button class="hrt ${fav?'on':''}" data-act="fav" data-v="${x.id}" aria-label="Yêu thích">${I('heart','s16')}</button></div><div class="nm" data-act="p1go" data-v="${x.id}">${x.nm}</div><div class="sp">${x.line} · ${x.dur} · DIA ${x.dia.replace('mm','')}${x.gdia?' · GDIA '+x.gdia:''}</div><div class="cl"><i style="background:${CDOT[x.color]}"></i><i style="background:#3a2a22"></i><i style="background:#9aa0a6"></i>+2 màu</div><div class="st">${stars(5)} 4.9 · Đã bán 2,1k</div><div class="pr">${vnd(x.price)}<small>/ chiếc</small>${x.sale?`<span class="sale">-${x.sale}%</span>`:''}</div><button class="add" data-act="qa" data-v="${x.id}">${I('bag','s16')} Thêm vào giỏ</button></article>`}
+function pPowSel(k,v,p,lab){
+  const pw=POWV.filter(o=>powOk(p,o));
+  return `<select class="p1-sel" data-act="p1pow" data-k="${k}" aria-label="${lab}">${k==='R'?`<option value="same" ${v==='same'?'selected':''}>Giống mắt trái</option>`:''}${pw.map(o=>`<option value="${o}" ${o===v?'selected':''}>${o==='0.00'?'0.00 (Không độ)':o}</option>`).join('')}</select>`;
+}
+
+/* ---------- Desktop ---------- */
+function p1D(){
+  if(!S.pdp)S.pdp=p1State('sandkiss');
+  const q=S.pdp,p=byId[q.id],gal=pGal(p),cur=q.tone!=null&&TONES[q.tone][1]?{src:TONES[q.tone][1]+'.jpg',cls:''}:q.tone!=null?{src:p.img+'.jpg',cls:''}:gal[q.img];
+  const sw=SW1.some(s=>s[0]===p.id)?SW1:[[p.id,CDOT[p.color]],...SW1.slice(0,4)];
+  const fav=S.fav.has(p.id),rel=pRelated(p);
+  const powNote=(q.mode==='chiec'?q.P:q.L)==='0.00'&&(q.mode==='chiec'||q.R==='0.00'||q.R==='same')?'Đang chọn lens không độ. Nếu bạn bị cận, hãy chọn đúng độ của mình.':`Độ cận ${p.nm} có sẵn từ 0 đến -${pMax(p)}.`;
+  const cmb=q.combo,lensP=p.price*2,items=[['lens',`${p.nm} · ${p.line} ${p.dur}`,lensP,imgFor(p,'lens')],['nuoc15','Nước nhỏ mắt 15ml',65000,{src:'o2_lensA.png',cls:'lensonly'}],['gap','Dụng cụ gắp lens',39000,{src:'o2_lensB.png',cls:'lensonly'}]];
+  const full=items.filter(i=>cmb[i[0]]).reduce((s,i)=>s+i[2],0),disc=cmb.lens?(cmb.nuoc15?12000:0)+(cmb.gap?12000:0):0;
+  const rvs=RV1.filter(r=>!q.rf||r.f.includes(q.rf));
+  return `<div class="wrap p1"><nav class="p1-crumb" aria-label="Breadcrumb"><button data-act="go" data-v="home">Trang chủ</button>${I('right','s16')}<button data-act="go" data-v="plp">Mẫu lens</button>${I('right','s16')}<button data-act="preset" data-k="dur" data-v="${p.dur}">Lens ${p.dur}</button>${I('right','s16')}<b>${p.nm}</b></nav>
+  <div class="p1-main">
+    <div class="p1-ths" role="tablist" aria-label="Ảnh sản phẩm">${gal.map((g,i)=>`<button class="${q.tone==null&&q.img===i?'on':''}" data-act="p1img" data-v="${i}" role="tab" aria-selected="${q.tone==null&&q.img===i}" aria-label="${g.lab||'Ảnh lens'}"><img src="${src(g.src)}" class="${g.cls}" alt="">${g.lab?`<span>${g.video?I('play','s16'):''}${g.lab}</span>`:''}</button>`).join('')}</div>
+    <div class="p1-mv"><img src="${src(cur.src)}" class="${cur.cls}" alt="${p.nm}" id="p1main">${cur.src==='o2_tv1.jpg'?`<span class="play">${I('play','s20')}</span>`:''}<button class="hrt ${fav?'on':''}" data-act="fav" data-v="${p.id}" aria-label="Yêu thích">${I('heart','s16')}</button><button class="nv l" data-act="p1img" data-v="${(q.img+gal.length-1)%gal.length}" aria-label="Ảnh trước">${I('left','s16')}</button><span class="cnt">${(q.tone==null?q.img:0)+1} / ${gal.length}</span><button class="nv r" data-act="p1img" data-v="${(q.img+1)%gal.length}" aria-label="Ảnh sau">${I('right','s16')}</button></div>
+    <div class="p1-tone"><div class="t">Xem lens với tone makeup gợi ý</div><div class="chips">${TONES.map((t,i)=>`<button class="${q.tone===i?'on':''}" data-act="p1tone" data-v="${i}" aria-pressed="${q.tone===i}">${t[0]}</button>`).join('')}</div></div>
+    <div class="p1-info">
+      <div class="p1-bdg"><span class="k">Bán chạy #1</span><span>${I('drop','s16')}Êm cả ngày</span><span>Hợp người cận</span></div>
+      <h1>${p.nm}</h1><div class="p1-sub">Lens ${p.line.toLowerCase()} ${p.dur} · ${p.color} ${p.gdia&&+p.gdia>=13.5?'giãn to':'giãn nhẹ'} · Chính hãng Hàn Quốc</div>
+      <div class="p1-rate"><span class="stars">${stars(5)}</span>4.9<span class="sep">|</span><button class="c1-link" data-act="p1scroll" data-v="p1rv" style="text-decoration:none">1.248 đánh giá</button><span class="sep">|</span>Đã bán 3,2k</div>
+      <div class="p1-price" id="p1price">${vnd(pUnit()*1)}<small>/ ${q.mode==='doi'?'đôi':'chiếc'}</small>${p.sale?`<span class="sale">-${p.sale}%</span>`:''}</div>
+      <div class="p1-promos"><span>${I('tag','s16')}Giảm 30K đơn đầu tiên · nhập NEW30</span><span>${I('gift','s16')}Lens khoá ẩm tặng Kits Yêu Mắt</span><span>${I('truck','s16')}Freeship từ 600K</span></div>
+      <div class="p1-comfort"><div class="h">Độ thoải mái khi đeo<button class="c1-link" data-act="na">Vì sao lens êm?</button></div><div class="g"><div><i>${I('drop','s16')}</i><span><small>Độ ngậm nước</small><b>${pWater(p)}</b></span></div><div><i>${I('clock','s16')}</i><span><small>Đeo tới</small><b>${pHours(p)}</b></span></div><div><i>${I('eye','s16')}</i><span><small>Mắt nhạy cảm</small><b>Phù hợp</b></span></div></div></div>
+      <div class="p1-lb">Màu sắc: <b style="margin-right:auto;margin-left:6px">${p.nm}</b></div>
+      <div class="p1-sw">${sw.map(s=>`<button class="${s[0]===p.id?'on':''}" style="background:${s[1]}" data-act="p1go" data-v="${s[0]}" aria-label="${byId[s[0]].nm}" title="${byId[s[0]].nm}"></button>`).join('')}</div>
+      <div class="p1-lb">Hạn sử dụng</div><div class="p1-pills"><button class="on" aria-pressed="true">${p.dur}</button>${['1 ngày','1 tháng','3 tháng','6 tháng'].filter(d=>d!==p.dur).slice(0,1).map(d=>`<button disabled title="Mẫu này không có bản ${d}">${d}</button>`).join('')}</div><button class="c1-link p1-mini" data-act="preset" data-k="dur" data-v="${p.dur}">Mẫu này chỉ có bản ${p.dur} · xem lens ${p.dur} khác</button>
+      <div class="p1-lb">Mua theo</div><div class="p1-pills" role="radiogroup"><button class="${q.mode==='chiec'?'on':''}" data-act="p1mode" data-v="chiec" role="radio" aria-checked="${q.mode==='chiec'}">1 chiếc (1 bên mắt)</button><button class="${q.mode==='doi'?'on':''}" data-act="p1mode" data-v="doi" role="radio" aria-checked="${q.mode==='doi'}">1 đôi (2 bên mắt)</button></div>
+      <div class="p1-lb">Độ cận<button class="c1-link" data-act="na" style="text-decoration:none;display:inline-flex;gap:6px;color:var(--n01)">${I('info','s16')}Hướng dẫn chọn độ</button></div>
+      ${q.mode==='chiec'?pPowSel('P',q.P,p,'Độ cận'):`<div class="p1-lr"><div><label>Mắt trái (L)</label>${pPowSel('L',q.L,p,'Mắt trái')}</div><div><label>Mắt phải (R)</label>${pPowSel('R',q.R,p,'Mắt phải')}</div></div>`}
+      <div class="p1-note">${q.mode==='doi'?'Chọn riêng độ từng mắt. Hai mắt cùng độ: chọn “Giống mắt trái” trong ô Mắt phải.<br>':''}${powNote}<br><span class="mut">Chưa biết độ? Chọn “Không độ” hoặc chat với Vivimoon để được tư vấn.</span></div>
+      <div class="p1-qty">Số lượng<div class="c1-step lg"><button data-act="p1qty" data-v="-1" ${q.qty<=1?'disabled':''} aria-label="Giảm">${I('minus','s20')}</button><span>${q.qty}</span><button data-act="p1qty" data-v="1" ${q.qty>=10?'disabled':''} aria-label="Tăng">${I('plus','s20')}</button></div><span class="mut">${q.mode==='doi'?'đôi · còn 47 đôi':'chiếc · còn 94 chiếc'}</span></div>
+      <div class="p1-buy"><button class="c1-btn out" data-act="p1add">${I('bag','s20')} Thêm vào giỏ</button><button class="c1-btn" data-act="p1buy">Mua ngay</button><button class="hb ${fav?'on':''}" data-act="fav" data-v="${p.id}" aria-label="Yêu thích">${I('heart','s20')}</button></div>
+      <div class="p1-trust"><div>${I('shield','s20')}<span>Chính hãng Hàn Quốc<small>Giấy phép Bộ Y tế</small></span></div><div>${I('refresh','s20')}<span>Không êm hoàn tiền<small>Trong 15 ngày (khoá ẩm, mắt thở)</small></span></div></div>
+      <div class="p1-pol ${q.policy?'open':''}"><button class="h" data-act="p1pol" aria-expanded="${q.policy}"><span>${I('refresh','s20')}Không thích đổi luôn · Không êm hoàn tiền</span>${I(q.policy?'up':'down','s16')}</button><div class="a"><div><ul><li>${I('check','s16')}Đổi 1–1 miễn phí trong 15 ngày kể từ khi nhận hàng</li><li>${I('check','s16')}Áp dụng lens khoá ẩm &amp; lens cho mắt thở</li><li>${I('check','s16')}Đeo cộm, ngứa, không êm → hoàn tiền 100%</li><li>${I('check','s16')}Không ưng màu/mẫu → đổi sang mẫu khác</li></ul><div class="lk"><button class="c1-link" data-act="na">Xem chi tiết chính sách</button><button class="c1-link" data-act="na">Cách gửi yêu cầu đổi trả</button></div></div></div></div>
+    </div>
+  </div></div>
+  <section class="p1-fs"><div class="wrap in"><div class="p1-faq"><h2>Trả lời nhanh cho người mới</h2>${FAQ1.map((f,i)=>`<div class="it ${q.faq===i?'open':''}"><button data-act="p1faq" data-v="${i}" aria-expanded="${q.faq===i}">${f[0]}${I(q.faq===i?'minus':'plus','s20')}</button><div class="a"><div>${f[1]}</div></div></div>`).join('')}<button class="c1-link" data-act="na" style="margin:24px 0 0 28px">Xem hướng dẫn đeo – tháo – bảo quản lens</button></div>
+    <div class="p1-spec"><h3>Thông số</h3>${SPEC1(p).map(s=>`<div class="rw"><span>${s[0]}</span><span>${s[1]}</span></div>`).join('')}</div></div></section>
+  <section class="p1-real wrap"><div class="p1-sh"><div><h2>Lens trên mắt thật</h2><p>Video makeup &amp; review từ khách hàng, KOC</p></div><button class="c1-link" data-act="na">Xem Vivimoon TV ${I('right','s16')}</button></div>
+    <div class="p1-rg">${[['o2_tv1','Look tự nhiên đi học'],['o2_tv2','Makeup tone hồng hẹn hò'],['o2_tv3','Đeo 10h đi làm có khô?'],['o2_tv4','Kỷ yếu cùng '+p.nm]].map(v=>`<button class="p1-rc" data-act="na"><div class="v"><img src="${src(v[0]+'.jpg')}" alt="" loading="lazy"><span class="pl">${I('play','s16')}</span><span class="tag" data-act="p1go" data-v="${p.id}"><i><img src="${src(imgFor(p,'lens').src)}" alt=""></i>${p.nm} · ${Math.round(p.price*2/1000)}K ${I('right','s16')}</span></div><div class="t">${v[1]}</div><small>@vivimoon.official · 128k lượt xem</small></button>`).join('')}</div></section>
+  <section class="p1-combo"><div class="wrap"><div class="p1-sh" style="margin:0"><div><h2>Mua kèm tiết kiệm hơn</h2><p>Người mua lens này thường mua thêm</p></div></div>
+    <div class="bx">${items.map((it,i)=>`${i?'<span class="pl">+</span>':''}<button class="p1-ci ${cmb[it[0]]?'on':'off'}" data-act="p1cmb" data-v="${it[0]}" role="checkbox" aria-checked="${cmb[it[0]]}"><span class="c1-cb ${cmb[it[0]]?'on':''}">${I('check')}</span><img src="${src(it[3].src)}" class="${it[3].cls}" alt=""><span>${it[1]}<small>${vnd(it[2])}${i&&cmb.lens&&cmb[it[0]]?` → ${vnd(it[2]-12000)}`:''}</small></span></button>`).join('')}
+    <div class="tot"><small>Tổng combo${disc?' · đã giảm '+vnd(disc):''}</small><b>${vnd(full-disc)}</b>${disc?`<s>${vnd(full)}</s>`:''}<br><button class="c1-btn" data-act="p1combo" ${full?'':'disabled'}>Thêm ${Object.values(cmb).filter(Boolean).length===3?'cả combo':Object.values(cmb).filter(Boolean).length+' sản phẩm'} vào giỏ</button></div></div></div></section>
+  <section class="p1-rv wrap" id="p1rv"><h2>Đánh giá từ khách hàng</h2><div class="sub">1.248 đánh giá · 86% có ảnh thật</div>
+    <div class="p1-rvg"><div><div class="p1-score"><span class="big">4.9</span><span><span class="stars">${stars(5)}</span><small>trên 5</small></span></div>
+      <div class="p1-bars">${[[5,86],[4,9],[3,3],[2,1],[1,1]].map(b=>`<div><span>${b[0]}★</span><span class="bar"><i style="width:${b[1]}%"></i></span><span>${b[1]}%</span></div>`).join('')}</div>
+      <div class="p1-attr"><div>Độ êm<b>4.8 / 5</b></div><div>Màu giống ảnh<b>4.7 / 5</b></div><div>Dễ đeo<b>4.9 / 5</b></div></div>
+      <button class="c1-btn out" data-act="na">Viết đánh giá</button></div>
+    <div><div class="p1-rf" role="tablist">${RF1.map((f,i)=>`<button class="${q.rf===i?'on':''}" data-act="p1rf" data-v="${i}" role="tab" aria-selected="${q.rf===i}">${f}</button>`).join('')}</div>
+      ${rvs.length?rvs.map((r,k)=>{const on=q.helpful.has(r.n);return `<div class="p1-r"><div class="who"><span class="av"></span><span><b>${r.n}</b><span class="st">${stars(5)} · Đã mua ${p.nm} ${p.dur}</span></span></div><div class="tg">${r.tg}</div><p>${r.t}</p><div class="ims">${r.im.map((m,j)=>`<span><img src="${src('lenshd_'+m+'.jpg')}" alt="">${j===2?`<i>${I('play','s16')}</i>`:''}</span>`).join('')}</div><button class="hp ${on?'on':''}" data-act="p1help" data-v="${r.n}" aria-pressed="${on}">${I('thumb','s16')}Hữu ích (${24+(on?1:0)})</button></div>`}).join(''):`<div class="p1-r empty">Chưa có đánh giá phù hợp bộ lọc này. <button class="c1-link" data-act="p1rf" data-v="0">Xem tất cả</button></div>`}
+      <button class="c1-btn out p1-all" data-act="na">Xem tất cả 1.248 đánh giá</button></div></div></section>
+  <section class="p1-rel wrap"><div class="p1-sh"><h2>Có thể bạn cũng thích</h2><button class="c1-link" data-act="go" data-v="plp">Xem tất cả ${I('right','s16')}</button></div><div class="p1-dg">${rel.map(dCard).join('')}</div></section>`;
+}
+/* Mini cart (desktop) */
+function mc1(){
+  const s=cSub(),need=Math.max(0,FREESHIP-s),fresh=S.mcFresh;S.mcFresh=false;
+  return `<div class="scrim mc1s" data-act="scrim"><aside class="mc1 ${fresh?'':'stay'}" role="dialog" aria-modal="true" aria-label="Giỏ hàng"><div class="hd"><h3>Giỏ hàng (${cCount()})</h3><button data-act="close" aria-label="Đóng">${I('close')}</button></div><div class="bd">
+    ${C.cart.length?`${S.mcAdded?`<div class="ok">${I('check','s20')}<span>Đã thêm ${S.mcAdded} vào giỏ</span></div>`:''}${c1Prog()}
+    ${C.cart.map((l,i)=>{const im=cImg(l),on=C.sel.has(ckey(l));return `<div class="mc1-li ${on?'':'off'}"><div class="im"><img src="${src(im.src)}" class="${im.cls}" alt=""></div><div><div class="t">${cName(l)}</div><div class="sels">${c1Sels(l,i)}</div><div class="ft"><div class="c1-step"><button data-act="c1qty" data-i="${i}" data-v="-1" ${l.qty<=1?'disabled':''} aria-label="Giảm">${I('minus','s16')}</button><span>${l.qty}</span><button data-act="c1qty" data-i="${i}" data-v="1" ${l.qty>=10?'disabled':''} aria-label="Tăng">${I('plus','s16')}</button></div><span class="p">${vnd(cLine(l))}</span></div>${on?'':'<small class="off">Chưa chọn để thanh toán · chọn lại trong giỏ hàng</small>'}</div><button class="del" data-act="c1del" data-i="${i}" aria-label="Xoá">${I('trash','s16')}</button></div>`}).join('')}
+    ${need?`<h4>Thêm để đủ Freeship</h4>${['nuoc15','gap'].map(k=>`<div class="mc1-up"><img src="${src(ACC1[k].img)}" alt=""><span class="t">${ACC1[k].nm}<small>${vnd(ACC1[k].price)}</small></span><button class="plus" data-act="c1acc" data-v="${k}" aria-label="Thêm ${ACC1[k].nm}">${I('plus','s16')}</button></div>`).join('')}`:''}`
+    :`<div class="c1-empty" style="padding:48px 0"><span class="ic">${I('cart')}</span><b>Giỏ hàng đang trống</b><button class="btn-gold" data-act="go" data-v="plp">Khám phá lens</button></div>`}</div>
+    ${C.cart.length?`<div class="mft"><div class="row"><span>Tạm tính</span><b>${vnd(s)}</b></div><small>Phí vận chuyển &amp; voucher áp dụng ở bước thanh toán</small><button class="c1-btn" data-act="c1checkout" ${s?'':'disabled'}>${I('lock','s20')} Thanh toán</button><button class="c1-btn out" data-act="c1cart">Xem giỏ hàng</button></div>`:''}</aside></div>`;
+}
+
+/* ---------- Mobile ---------- */
+function p1M(){
+  if(!S.pdp)S.pdp=p1State('sandkiss');
+  const q=S.pdp,p=byId[q.id],fav=S.fav.has(p.id),gal=[{src:p.img+'.jpg',cls:''},eyeOf(p),imgFor(p,'lens'),{src:'makeup_0.jpg',cls:''},{src:'banner.jpg',cls:'ban'}];
+  const pw=POWERS.filter(v=>p.pw.includes(v));
+  const spec=[['Tên sản phẩm',`${p.nm} - VIVIMOON lens ${p.line.toLowerCase()}`],['Độ cận',`0 - ${pmax(p)} độ`],['Thành phần','40% Water, MPC+Silicone Hydrogel+HEMA'],['Hạn sử dụng',`${p.dur} kể từ khi mở vỉ`],['Màu sắc',`${p.color} ${p.gdia&&+p.gdia>=13.5?'giãn to, tạo hiệu ứng mắt to tròn':'giãn vừa, giúp mắt có chiều sâu, cuốn hút'}`],['Đường kính (Dia)',p.dia.replace('mm',' mm')],['Độ giãn tròng (Gdia)',p.gdia?p.gdia+' mm':'—'],['Bán kính cong (B.C)','8.6 mm']];
+  return `<div class="p1m"><nav class="p1-crumb"><button data-act="go" data-v="home">Sản phẩm</button>${I('right','s16')}<button data-act="go" data-v="plp">Toàn bộ mẫu lens</button>${I('right','s16')}<b>${p.nm}</b></nav>
+  <div class="p1m-gal"><div class="p1m-track" id="p1track">${gal.map((g,i)=>`<div><img src="${src(g.src)}" class="${g.cls}" alt="${p.nm} – ảnh ${i+1}" ${i?'loading="lazy"':''}></div>`).join('')}</div>
+    <button class="hrt ${fav?'on':''}" data-act="fav" data-v="${p.id}" aria-label="Yêu thích">${I('heart','s16')}</button><span class="lc"><img src="${src(imgFor(p,'lens').src)}" alt="">${p.nm}</span><span class="cnt" id="p1cnt">${q.slide+1} / ${gal.length}</span></div>
+  <div class="p1m-ths">${gal.map((g,i)=>`<button class="${q.slide===i?'on':''}" data-act="p1slide" data-v="${i}" aria-label="Ảnh ${i+1}"><img src="${src(g.src)}" alt=""></button>`).join('')}</div>
+  <div class="p1m-info"><h1>${p.nm}</h1><div class="code">Mã sản phẩm: ${pCode(p)}</div><div class="sp">${p.line==='Mắt thở'?'Cho mắt thở':'Khoá ẩm'} • ${p.dur}${p.gdia?' • GDIA '+p.gdia:''}</div><div class="pr"><b>${vnd(p.price)}</b>${p.sale?`<span class="sale">-${p.sale}%</span>`:''}<small>/ chiếc</small></div></div>
+  <div class="p1m-pw"><button class="h" data-act="p1open" data-v="add"><span>${pw.length} độ cận, 2 cách mua</span>${I('right','s20')}</button><div class="row">${POWERS.map(v=>`<button data-act="p1chip" data-v="${v}" ${p.pw.includes(v)?'':'disabled'}>${v}</button>`).join('')}</div></div>
+  <div class="p1m-gift"><div class="h">${I('gift','s16')}${p.line==='Khoá ẩm'?'Lens khoá ẩm tặng Kits yêu mắt':'Mua lens 6 tháng, tặng Kits yêu mắt'}</div><div class="b"><img src="${src('gift_kit.jpg')}" alt=""><ul><li>Khay &amp; bộ dụng cụ đeo lens</li><li>Sticker ghi hạn sử dụng</li><li>Hướng dẫn sử dụng</li><li>Khăn ướt làm sạch da Vivimoon</li></ul></div></div>
+  <section class="p1m-desc ${q.more?'more':''}"><h2>Mô tả sản phẩm</h2><div class="p1m-st"><div>Độ ngậm nước<b>${pWater(p)}</b></div><div>Đeo tới<b>${pHours(p)}</b></div><div>Mắt nhạy cảm<b>Phù hợp</b></div></div>
+    <div class="ph"><img src="${src(eyeOf(p).src)}" alt=""></div>
+    <div class="p1m-tb">${spec.map(s=>`<div><span>${s[0]}</span><span>${s[1]}</span></div>`).join('')}</div>
+    <h3>Đặc điểm và công dụng</h3><div class="txt">Vivimoon tự hào là đơn vị kính áp tròng tiên phong mang MPC về Việt Nam, dẫn đầu xu hướng nguyên liệu tiên tiến trong ngành kính áp tròng.<br>- Nguyên liệu cao cấp và an toàn: MPC + Silicone Hydrogel + Hema, mô phỏng màng tế bào giúp lens không bám protein, hạn chế khô và kích ứng.<br>- ${p.nm} cho hiệu ứng ${p.color.toLowerCase()} tự nhiên, phù hợp ${(p.occ||[]).join(', ').toLowerCase()}.<br>- Thiết kế viền mờ, không lộ vân khi chụp ảnh cận.</div>
+    <div class="btnc"><button data-act="p1more" aria-expanded="${q.more}">${q.more?'Thu gọn':'Xem thêm'}</button></div></section>
+  <section class="m1-ban"><img src="${src('banner.jpg')}" alt="Không thích đổi luôn, không êm hoàn tiền"></section>
+  <section class="p1m-faq"><div class="cd p1-faq">${FAQ1.map((f,i)=>`<div class="it ${q.faq===i?'open':''}"><button data-act="p1faq" data-v="${i}" aria-expanded="${q.faq===i}">${f[0]}${I(q.faq===i?'minus':'plus','s20')}</button><div class="a"><div>${f[1]}</div></div></div>`).join('')}</div></section>
+  <section class="p1m-vid"><h2>Video cận chất ${p.nm}</h2><p>Tham khảo các make up looks &amp; video review chi tiết lens</p><div class="track" id="p1vid">${['o2_tv1','o2_tv2','o2_tv3','o2_tv4'].map(v=>`<button class="v" data-act="na" aria-label="Phát video"><img src="${src(v+'.jpg')}" alt="" loading="lazy"><span class="pl">${I('play','s20')}</span></button>`).join('')}</div>
+    <div class="arrows"><button class="ar" data-act="scroll" data-t="p1vid" data-v="-1" aria-label="Trước">${I('left','s16')}</button><div class="dots"><i class="on"></i><i></i><i></i><i></i></div><button class="ar" data-act="scroll" data-t="p1vid" data-v="1" aria-label="Sau">${I('right','s16')}</button></div></section>
+  <section class="p1m-rel"><h2>Có thể bạn cũng thích</h2><div class="gr">${pRelated(p).slice(0,4).map(card).join('')}</div></section></div>`;
+}
+function pSheet(){
+  const q=S.pdp,p=byId[q.id],ims=[{src:p.img+'.jpg',cls:''},eyeOf(p),imgFor(p,'lens')];
+  return `<div class="scrim bottom" data-act="scrim"><div class="sheet p1-sht" role="dialog" aria-modal="true" aria-label="${q.sheet==='buy'?'Mua ngay':'Thêm vào giỏ hàng'}"><div class="handle"></div><div class="hd"><button data-act="close" aria-label="Đóng">${I('close')}</button></div>
+    <div class="opts-col"><h2 class="qa-nm">${p.nm}</h2><div class="qa-pr">${vnd(pUnit())}<small>/ ${q.mode==='doi'?'đôi':'chiếc'}</small></div><div class="qa-sp">${p.line==='Mắt thở'?'Cho mắt thở':'Khoá ẩm'} • ${p.dur}${p.gdia?' • GDIA '+p.gdia:''}</div>
+    <div class="m-imgs">${ims.map(i=>`<div><img src="${src(i.src)}" class="${i.cls}" alt=""></div>`).join('')}</div><div class="div"></div>
+    <div class="lbl">Độ cận<small>${q.mp==='0'?'0.00 – không độ':'-'+q.mp}</small></div><div class="pw">${POWERS.map(v=>`<button class="${q.mp===v?'on':''}" data-act="p1mp" data-v="${v}" ${p.pw.includes(v)?'':'disabled title="Hết hàng"'}>${v}</button>`).join('')}</div><div class="div"></div>
+    <div class="lbl">Mua theo</div><div class="buy"><button class="${q.mode==='chiec'?'on':''}" data-act="p1mode" data-v="chiec">01 chiếc (1 bên mắt)</button><button class="${q.mode==='doi'?'on':''}" data-act="p1mode" data-v="doi">01 đôi (2 bên mắt)</button></div><div class="div"></div>
+    <div class="qtyrow"><span class="lbl">Số lượng</span><div class="stepper"><button data-act="p1qty" data-v="-1" ${q.qty<=1?'disabled':''} aria-label="Giảm">${I('minus','s20')}</button><span>${q.qty}</span><button data-act="p1qty" data-v="1" ${q.qty>=10?'disabled':''} aria-label="Tăng">${I('plus','s20')}</button></div></div>
+    <div class="subtotal"><span>Tạm tính</span><b>${vnd(pUnit()*q.qty)}</b></div>
+    <button class="m1-gbtn" data-act="p1confirm">${q.sheet==='buy'?'Mua ngay':'Thêm vào giỏ'}</button></div></div></div>`;
+}
+function p1Bar(){return `<div class="p1-bar"><button class="ol" data-act="p1open" data-v="add">Thêm vào giỏ</button><button class="gd" data-act="p1open" data-v="buy">Mua ngay</button></div>`}
+
+/* ---------- Events ---------- */
+function p1AddLine(l,openMini,from){
+  c1Add(l);S.mcAdded=lineLbl(l);
+  if(openMini){S.overlay='mc1';S.mcFresh=true;render();if(from)flyToCart(from,imgFor(byId[l.id],'img').src)}
+  else{S.overlay=null;render();bumpBadge();toast(`Đã thêm ${S.mcAdded} vào giỏ`,true)}
+}
+function p1Click(a,v,el,e){
+  const q=S.pdp;
+  switch(a){
+    case 'p1go': if(e.target.closest('[data-act="fav"]'))break;p1Open(v);break;
+    case 'p1img': q.img=+v;q.tone=null;render();break;
+    case 'p1tone': q.tone=q.tone===+v?null:+v;render();break;
+    case 'p1mode': q.mode=v;if(v==='doi'&&q.R!=='same'&&q.R===q.L)q.R='same';render();break;
+    case 'p1qty': q.qty=Math.min(10,Math.max(1,q.qty+ +v));render();if(q.qty>=10)toast('Tối đa 10 sản phẩm mỗi lần');break;
+    case 'p1pol': q.policy=!q.policy;render();break;
+    case 'p1faq': q.faq=q.faq===+v?-1:+v;render();break;
+    case 'p1rf': q.rf=+v;render();break;
+    case 'p1help': q.helpful.has(v)?q.helpful.delete(v):q.helpful.add(v);render();break;
+    case 'p1more': q.more=!q.more;render();break;
+    case 'p1cmb': q.combo[v]=!q.combo[v];render();break;
+    case 'p1scroll': {const t=document.getElementById(v);if(t)scroller.scrollTo({top:t.offsetTop-90,behavior:'smooth'});break;}
+    case 'p1slide': {const t=document.getElementById('p1track');if(t)t.scrollTo({left:t.clientWidth*+v,behavior:'smooth'});break;}
+    case 'p1add': p1AddLine(pLineD(),true,el.getBoundingClientRect());break;
+    case 'p1buy': {const l=pLineD();c1Add(l);C.sel=new Set([ckey(l)]);go('checkout');break;}
+    case 'p1combo': {const p=byId[q.id];let n=0;
+      if(q.combo.lens){c1Add({id:p.id,mode:'doi',L:q.mode==='doi'?q.L:q.P,R:q.mode==='doi'?(q.R==='same'?q.L:q.R):q.P,qty:1});n++}
+      if(q.combo.nuoc15){c1Add({id:q.combo.lens?'nuoc15c':'nuoc15',acc:true,qty:1});n++}
+      if(q.combo.gap){c1Add({id:q.combo.lens?'gapc':'gap',acc:true,qty:1});n++}
+      S.mcAdded=`${n} sản phẩm combo`;S.overlay=isMob()?null:'mc1';S.mcFresh=true;render();bumpBadge();if(isMob())toast('Đã thêm combo vào giỏ',true);break;}
+    case 'p1open': q.sheet=v;S.overlay='p1sheet';renderOverlay();break;
+    case 'p1chip': q.mp=v;q.sheet='add';S.overlay='p1sheet';renderOverlay();break;
+    case 'p1mp': q.mp=v;renderOverlay();break;
+    case 'p1confirm': {const l=pLineM();if(q.sheet==='buy'){c1Add(l);C.sel=new Set([ckey(l)]);S.overlay=null;go('checkout')}else p1AddLine(l,false);break;}
+  }
+}
+function p1Change(el){
+  if(el.dataset.act==='p1pow'){const q=S.pdp,k=el.dataset.k;q[k]=el.value;if(k==='L'&&q.mode==='doi'&&q.R===q.L)q.R='same';render()}
+}
+/* Thanh header gọn khi cuộn (mobile PDP) + cập nhật slide */
+document.getElementById('scroller').addEventListener('scroll',()=>{if(S.opt!==1||S.page!=='pdp')return;const h=scroller.querySelector('.hdr');if(h)h.classList.toggle('compact',isMob()&&scroller.scrollTop>140)},{passive:true});
+document.addEventListener('scroll',e=>{const t=e.target;if(!t||t.id!=='p1track'||!S.pdp)return;const i=Math.round(t.scrollLeft/t.clientWidth);if(i!==S.pdp.slide){S.pdp.slide=i;const c=document.getElementById('p1cnt');if(c)c.textContent=`${i+1} / ${t.children.length}`;document.querySelectorAll('.p1m-ths button').forEach((b,k)=>b.classList.toggle('on',k===i))}},true);
+/*P1JS-END*/
+
 /* ---------- Render ---------- */
 const scroller=document.getElementById('scroller'), overlay=document.getElementById('overlay'), stage=document.getElementById('stage');
 function render(keepScroll=true){
@@ -2892,7 +3381,7 @@ function render(keepScroll=true){
   if(pg==='landing') h=landing();
   else if(pg==='checkout') h=isMob()?header()+m+c1CheckoutM()+'</main>'+footer():m+c1Checkout()+'</main>';
   else if(pg==='qr'||pg==='momo') h=m+c1Pay(pg)+'</main>';
-  else h=header()+m+(({home,plp,cart:isMob()?c1CartM:c1Cart,success:c1Success})[pg]||home)()+'</main>'+footer();
+  else h=header()+m+(({home,plp,cart:isMob()?c1CartM:c1Cart,success:c1Success,pdp:isMob()?p1M:p1D})[pg]||home)()+'</main>'+footer();
   scroller.innerHTML=h;
   if(S.anim.flash){const [k,v]=S.anim.flash.split('|'); document.querySelectorAll(`[data-act="ft"][data-k="${k}"]`).forEach(b=>{if(b.dataset.v===v)b.classList.add('flash')})}
   S.anim={};
@@ -2911,6 +3400,8 @@ function renderOverlay(){
   else if(S.overlay==='momo') h=momoSheet(C.mm,C.order?C.order.total:0,'c1mmdone','c1mmcancel');
   else if(S.overlay==='msum') h=sumSheet();
   else if(S.overlay==='mvou') h=vouSheet();
+  else if(S.overlay==='mc1') h=mc1();
+  else if(S.overlay==='p1sheet') h=pSheet();
   overlay.innerHTML=h;
   renderFab();
 }
@@ -2946,6 +3437,7 @@ document.addEventListener('click',e=>{
   if(a==='simpaid'){if(S.opt===2)O2.click('o2paid','',document.body,e);else c1Click('c1paid','',el,e);return}
   if(a.startsWith('o2')){O2.click(a,v,el,e);return}
   if(a.startsWith('c1')){c1Click(a,v,el,e);return}
+  if(a.startsWith('p1')){p1Click(a,v,el,e);return}
   if(a==='opt'){setOpt(+v);return}
   if(S.opt===2&&a==='go'){O2.go(v==='landing'?'home':v);return}
   if(S.opt===2&&a==='na'){if(O2.T.overlay)closeOverlay();toast('Màn này nằm ngoài luồng của prototype');return}
@@ -2956,7 +3448,7 @@ document.addEventListener('click',e=>{
     case 'go': go(v); break;
     case 'reset': c1Reset(); Object.assign(S,{f:freshFilters(),open:new Set(DEFAULT_OPEN),showFilter:true,view:'img',sort:'pop',shown:8,quiz:{step:0,a:{}},homeQuiz:{step:0,a:{}},quizDone:false,powHl:false,cart:0,fav:new Set(),hero:0,overlay:null,qa:null}); go('landing'); break;
     case 'na': if(S.overlay) closeOverlay(); toast('Màn này nằm ngoài 2 luồng của prototype'); break;
-    case 'pdp': toast('Màn Chi tiết lens (PDP) chưa nằm trong prototype này'); break;
+    case 'pdp': {const id=v||(S.overlay==='qa'&&S.qa?S.qa.id:'sandkiss'); p1Open(id); break;}
     case 'drawer': S.overlay='drawer'; renderOverlay(); break;
     case 'close': closeOverlay(); break;
     case 'hero': heroTo(S.hero+ +v); break;
@@ -2997,6 +3489,7 @@ document.addEventListener('change',e=>{
   const el=e.target;
   if(el.dataset.act&&el.dataset.act.startsWith('o2')){O2.change(el);return}
   if(el.dataset.act&&el.dataset.act.startsWith('c1')){c1Change(el);return}
+  if(el.dataset.act&&el.dataset.act.startsWith('p1')){p1Change(el);return}
   if(el.dataset.act==='pow'){S.f[el.dataset.v]=el.value; S.powHl=false; S.shown=8; refresh();}
 });
 document.addEventListener('input',e=>{
