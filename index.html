@@ -39,7 +39,28 @@ svg.i.s16{width:16px;height:16px}svg.i.s20{width:20px;height:20px}
 #dock button{padding:6px 12px;border-radius:999px;white-space:nowrap}
 #dock .seg button[aria-pressed="true"]{background:var(--white);color:var(--n01)}
 #dock .lnk:hover{background:#333}
-@media (max-width:700px){#dock{display:none}}
+#dockTg{display:none}
+#dock .hd{display:none}
+@media (max-width:700px){
+  #dockTg{display:flex;position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:210;flex-direction:column;align-items:center;gap:6px;width:30px;padding:10px 0;background:var(--n01);color:var(--white);border-radius:0 12px 12px 0;box-shadow:2px 6px 18px rgba(0,0,0,.28);font:500 11px/1 var(--sans);letter-spacing:.02em;opacity:.92;transition:opacity .2s,width .2s}
+  #dockTg:active{opacity:1;width:34px}
+  #dockTg .v{writing-mode:vertical-rl;transform:rotate(180deg)}
+  #dockTg .dot{width:6px;height:6px;border-radius:50%;background:var(--p01)}
+  #dockTg[aria-expanded="true"]{opacity:0;pointer-events:none}
+  #dock{display:none;z-index:220;left:12px;right:12px;bottom:auto;top:50%;transform:translateY(-50%);flex-direction:column;align-items:stretch;gap:8px;padding:12px;border-radius:18px;max-height:calc(100% - 32px);overflow:auto;font-size:14px;animation:dockIn .22s cubic-bezier(.2,.8,.3,1)}
+  #dock.open{display:flex}
+  #dock .hd{display:flex;justify-content:space-between;align-items:center;padding:2px 4px 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#aaa}
+  #dock .hd button{padding:4px;border-radius:50%;color:var(--white)}
+  #dock .seg{padding:3px}
+  #dock .seg button{flex:1;padding:10px 12px;font-size:14px}
+  #dock .seg.dev{display:none}
+  #dock>button,#dock .ctx button{text-align:left;padding:11px 14px;background:#2a2a2a;border-radius:12px}
+  #dock .ctx{flex-direction:column;gap:8px}
+  #dock .ctx button{background:var(--p01)}
+  #dockScrim{position:fixed;inset:0;z-index:205;background:rgba(0,0,0,.35);display:none}
+  #dockScrim.open{display:block;animation:fade .2s}
+}
+@keyframes dockIn{from{opacity:0;transform:translateY(-46%)}}
 
 /* ===== Header ===== */
 .ann{background:var(--n01);color:var(--white);font-size:11px;letter-spacing:.06em;text-align:center;padding:8px var(--gut);text-transform:uppercase}
@@ -2318,6 +2339,18 @@ main.enter{animation:pageIn .45s ease both}
   .o2 .okbt2 .btn{padding:0 8px;font-size:14px!important;height:46px!important}
 }
 /*O2ADD-END*/
+/* ===== Vuốt để quay lại ===== */
+#swipeInd{position:absolute;left:0;top:50%;width:40px;height:40px;border-radius:50%;background:rgba(26,26,26,.85);color:#fff;display:grid;place-items:center;z-index:170;opacity:0;transform:translate(-44px,-50%) scale(.7);pointer-events:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+#swipeInd.ready{background:var(--p01)}
+#swipeInd.no{background:#888}
+#frame.swiping{background:#cfcac3}
+#frame.swiping #scroller{box-shadow:-14px 0 28px rgba(0,0,0,.22);user-select:none;-webkit-user-select:none}
+#frame.swiping .scrim{user-select:none}
+#frame.nav-back #scroller{animation:navBack .32s cubic-bezier(.2,.8,.3,1)}
+@keyframes navBack{from{transform:translateX(-28%);opacity:.55}}
+#dock .tip{display:none}
+@media (max-width:700px){#dock .tip{display:flex;gap:8px;align-items:center;font-size:12px;color:#aaa;padding:4px 4px 0;line-height:1.4}}
+body.swiping #dockTg{opacity:0!important;transition:opacity .15s}
 </style>
 </head><body>
 
@@ -2327,12 +2360,15 @@ main.enter{animation:pageIn .45s ease both}
     <div id="overlay"></div>
   </div>
 </div>
+<button id="dockTg" data-act="docktg" aria-expanded="false" aria-controls="dock" aria-label="Mở bảng điều khiển prototype – đổi Option"><span class="dot"></span><span class="v" id="dockTgLbl">Option 1</span></button>
+<div id="dockScrim" data-act="dockclose"></div>
 <div id="dock" role="toolbar" aria-label="Điều khiển prototype">
+  <div class="hd"><span>Điều khiển prototype</span><button data-act="dockclose" aria-label="Đóng"><svg class="i s20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
   <div class="seg" id="optSeg">
     <button data-act="opt" data-v="1" aria-pressed="true">Opt 1</button>
     <button data-act="opt" data-v="2" aria-pressed="false">Opt 2</button>
   </div>
-  <div class="seg">
+  <div class="seg dev">
     <button data-act="device" data-v="desktop" aria-pressed="true">Desktop</button>
     <button data-act="device" data-v="mobile" aria-pressed="false">Mobile</button>
   </div>
@@ -2340,6 +2376,7 @@ main.enter{animation:pageIn .45s ease both}
   <button class="lnk" data-act="go" data-v="plp">Danh sách lens</button>
   <button class="lnk" data-act="go" data-v="cart">Giỏ hàng</button>
   <button class="lnk" data-act="reset">Làm lại</button>
+  <div class="tip"><svg class="i s16" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Mẹo: vuốt từ mép trái màn hình sang phải để quay lại màn trước</div>
 </div>
 
 <script>/*! qrcode-generator 1.4.4 · MIT · Kazuhiko Arase */
@@ -3408,8 +3445,10 @@ function renderOverlay(){
 let toastT;
 const toastLayer=document.createElement('div'); document.getElementById('frame').appendChild(toastLayer);
 function toast(msg,link){clearTimeout(toastT);const lk=link===true?{t:'Xem giỏ hàng',a:S.opt===2?'o2mc':'c1cart'}:link;toastLayer.innerHTML=`<div class="toast" role="status"><span class="ok">${I('check')}</span><span>${msg}</span>${lk?`<button data-act="${lk.a}">${lk.t}</button>`:''}</div>`;toastT=setTimeout(()=>{const t=toastLayer.firstChild;if(t){t.classList.add('out');setTimeout(()=>toastLayer.innerHTML='',250)}},3200)}
+function dockOpen(on){const d=document.getElementById('dock'),t=document.getElementById('dockTg'),sc=document.getElementById('dockScrim');d.classList.toggle('open',on);sc.classList.toggle('open',on);t.setAttribute('aria-expanded',on)}
 function setOpt(n){
-  S.opt=n; frame0.classList.toggle('o2',n===2); frame0.classList.toggle('o2s',n===2);
+  S.opt=n; const tl=document.getElementById('dockTgLbl'); if(tl) tl.textContent='Option '+n;
+  try{const u=new URL(location.href);u.searchParams.set('opt',n);history.replaceState(history.state,'',u)}catch(_){} frame0.classList.toggle('o2',n===2); frame0.classList.toggle('o2s',n===2);
   document.querySelectorAll('[data-act="opt"]').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.v===n));
   S.overlay=null; O2.T.overlay=null; overlay.innerHTML='';
   if(n===2) O2.go(O2.T.page); else go(S.page);
@@ -3419,7 +3458,7 @@ const frame0=document.getElementById('frame');
 function go(page){
   if(page==='checkout'&&!cSub()) page='cart';
   if(['qr','momo','success'].includes(page)&&!C.order) page='cart';
-  S.anim.page=true;S.anim.grid=page==='plp';S.page=page;S.overlay=null;S.sortOpen=false;render(false);scroller.scrollTop=0}
+  S.anim.page=true;S.anim.grid=page==='plp';S.page=page;S.overlay=null;S.sortOpen=false;render(false);scroller.scrollTop=0;navPush()}
 function setDevice(d){
   S.device=d;stage.classList.toggle('mobile',d==='mobile');
   document.querySelectorAll('[data-act="device"]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===d));
@@ -3431,6 +3470,9 @@ document.addEventListener('click',e=>{
   const el=e.target.closest('[data-act]'); if(!el) return;
   const a=el.dataset.act, v=el.dataset.v;
   if(a==='scrim'){ if(e.target===el) closeOverlay(); return; }
+  if(a==='docktg'){dockOpen(true);return}
+  if(a==='dockclose'){dockOpen(false);return}
+  if(el.closest('#dock')&&document.getElementById('dock').classList.contains('open')) setTimeout(()=>dockOpen(false),120);
   const tEl=el.closest('.toast'); if(tEl){clearTimeout(toastT);tEl.remove()}
   if(a==='simcart'){if(S.opt===2)O2.sample();else{c1Sample();render()}return}
   if(a==='simexpire'){if(S.opt===2){O2.T.qrLeft=0;O2.T.checking=false;O2.render()}else{C.left=0;C.checking=false;render()}toast('Mã QR đã hết hạn (giả lập)');return}
@@ -3956,7 +3998,7 @@ function renderOverlay(){
   if(T.overlay==='qa')h=qaBody();else if(T.overlay==='mc')h=mcBody();else if(T.overlay==='fs')h=fsBody();else if(T.overlay==='drawer')h=drawerBody();else if(T.overlay==='momo')h=momoSheet(T.mm,T.order?T.order.total:0,'o2mmdone','o2mmcancel');
   overlay.innerHTML=h;
 }
-function go(p){T.page=p;T.overlay=null;T.menu=null;T.anim.page=true;T.anim.grid=p==='plp';render(false);scroller.scrollTop=0}
+function go(p){T.page=p;T.overlay=null;T.menu=null;T.anim.page=true;T.anim.grid=p==='plp';render(false);scroller.scrollTop=0;navPush()}
 function rerender(){ if(T.overlay==='fs'){const bd=document.getElementById('o2fsbd');const s=bd?bd.scrollTop:0;render();const nb=document.getElementById('o2fsbd');if(nb)nb.scrollTop=s}else render() }
 
 /* ---------- cart ops ---------- */
@@ -4070,7 +4112,93 @@ return {T,render,renderOverlay,go,click,change,input,reset,sample};
 })();
 
 /*O2JS-END*/
+/*NAVJS-START*/
+/* ================= Quay lại: vuốt từ mép trái + nút Back trình duyệt (cả 2 option) =================
+   - Mỗi lần chuyển màn → history.pushState, nên vuốt-back của iOS/Android và nút Back trình duyệt đều hoạt động.
+   - Trong khung mobile: vuốt từ mép trái (≤24px) sang phải → trang trượt theo tay, thả quá 35% chiều rộng → quay lại.
+   - Đang mở bottom sheet / popup → lần back đầu tiên chỉ đóng nó. */
+const NAV={cur:null,silent:false,sc:0,justSwiped:0};
+function navSnap(){return S.opt===2?{o:2,page:O2.T.page,pid:O2.T.page==='pdp'?O2.T.pdp:null}:{o:1,page:S.page,pid:S.page==='pdp'&&S.pdp?S.pdp.id:null}}
+const navSame=(a,b)=>a&&b&&a.o===b.o&&a.page===b.page&&a.pid===b.pid;
+function navPush(){
+  if(NAV.silent)return;
+  const n=navSnap();
+  try{
+    if(!NAV.cur){NAV.cur={...n,d:0};history.replaceState({vv:NAV.cur},'');return}
+    if(navSame(n,NAV.cur))return;
+    history.replaceState({vv:{...NAV.cur,sc:NAV.sc}},'');
+    NAV.cur={...n,d:(NAV.cur.d||0)+1,sc:0};
+    history.pushState({vv:NAV.cur},'');
+  }catch(_){NAV.cur={...n,d:0}}
+}
+const navOverlay=()=>S.opt===2?O2.T.overlay:S.overlay;
+function navRestore(t){
+  const fr=document.getElementById('frame');
+  NAV.silent=true;
+  try{
+    if(t.o!==S.opt)setOpt(t.o);
+    if(t.o===1){if(t.page==='pdp'&&t.pid&&(!S.pdp||S.pdp.id!==t.pid))S.pdp=p1State(t.pid);go(t.page)}
+    else{if(t.page==='pdp'&&t.pid)O2.T.pdp=t.pid;O2.go(t.page)}
+    const sc=document.getElementById('scroller');sc.scrollTop=t.sc||0;NAV.sc=sc.scrollTop;
+  }finally{NAV.silent=false}
+  NAV.cur={...navSnap(),d:t.d||0,sc:t.sc||0};
+  fr.classList.remove('nav-back');void fr.offsetWidth;fr.classList.add('nav-back');setTimeout(()=>fr.classList.remove('nav-back'),380);
+}
+window.addEventListener('popstate',e=>{
+  const st=e.state&&e.state.vv;if(!st)return;
+  if(navOverlay()){closeOverlay();try{history.pushState({vv:NAV.cur},'')}catch(_){}return}
+  let t=st;const from=NAV.cur&&NAV.cur.page;
+  /* Sau khi đặt hàng: không quay lại màn thanh toán đã xong */
+  if(NAV.cur&&NAV.cur.o===st.o){
+    if(from==='success'&&['checkout','qr','momo'].includes(st.page))t={...st,page:'home',sc:0};
+    else if(['qr','momo'].includes(from)&&st.page==='checkout')t={...st,page:'cart',sc:0};
+  }
+  navRestore(t);
+});
+function navBack(){if(navOverlay()){closeOverlay();return}try{history.back()}catch(_){}}
+document.getElementById('scroller').addEventListener('scroll',e=>{if(!NAV.silent)NAV.sc=e.target.scrollTop},{passive:true});
+/* Cử chỉ vuốt từ mép trái */
+(function(){
+  const fr=document.getElementById('frame'),EDGE=24;
+  const ind=document.createElement('div');ind.id='swipeInd';ind.setAttribute('aria-hidden','true');ind.innerHTML=I('left','s20');fr.appendChild(ind);
+  let g=null;
+  const mobView=()=>fr.clientWidth<=860;
+  const canBack=()=>!!navOverlay()||!!(NAV.cur&&NAV.cur.d>0);
+  const els=()=>{const sc=overlay.querySelector('.scrim');return navOverlay()&&sc?[sc]:[document.getElementById('scroller'),barLayer,fabLayer]};
+  function start(x,y,src){if(!mobView())return;const r=fr.getBoundingClientRect();if(x-r.left>EDGE||x<r.left)return;g={x0:x,y0:y,t0:Date.now(),on:false,w:r.width,src,can:canBack(),d:0}}
+  function move(x,y,e){
+    if(!g)return;const dx=x-g.x0,dy=y-g.y0;
+    if(!g.on){if(Math.abs(dy)>12&&Math.abs(dy)>dx){g=null;return}if(dx>10&&dx>Math.abs(dy)*1.2){g.on=true;g.el=els();fr.classList.add('swiping');document.body.classList.add('swiping')}else return}
+    if(e&&e.cancelable)e.preventDefault();
+    const d=Math.max(0,g.can?dx:Math.min(60,dx*.25));g.d=d;
+    g.el.forEach(el=>{el.style.transition='none';el.style.transform=d?`translateX(${d}px)`:''});
+    const p=Math.min(1,d/(g.w*.35));ind.style.transition='none';ind.style.opacity=Math.min(1,p*1.3);ind.style.transform=`translate(${Math.min(d*.45,52)-44}px,-50%) scale(${.7+.3*p})`;ind.classList.toggle('ready',p>=1&&g.can);ind.classList.toggle('no',!g.can);
+  }
+  function end(){
+    if(!g)return;const gg=g;g=null;fr.classList.remove('swiping');document.body.classList.remove('swiping');if(!gg.on)return;
+    NAV.justSwiped=Date.now();
+    const v=gg.d/Math.max(1,Date.now()-gg.t0),commit=gg.can&&(gg.d>gg.w*.35||(v>.6&&gg.d>40));
+    ind.style.transition='opacity .2s,transform .2s';ind.style.opacity=0;ind.style.transform='translate(-44px,-50%) scale(.7)';setTimeout(()=>{ind.style.transition='';ind.classList.remove('ready','no')},220);
+    if(commit){gg.el.forEach(el=>{el.style.transition='transform .18s ease-out';el.style.transform=`translateX(${gg.w}px)`});
+      setTimeout(()=>{gg.el.forEach(el=>{el.style.transition='';el.style.transform=''});navBack()},170)}
+    else{gg.el.forEach(el=>{el.style.transition='transform .25s cubic-bezier(.3,.7,.3,1)';el.style.transform=''});setTimeout(()=>gg.el.forEach(el=>el.style.transition=''),260);if(!gg.can&&gg.d>30)toast('Đây là màn đầu tiên')}
+  }
+  function cancel(){if(!g)return;if(g.el)g.el.forEach(el=>{el.style.transition='';el.style.transform=''});g=null;fr.classList.remove('swiping');document.body.classList.remove('swiping');ind.style.opacity=0}
+  document.addEventListener('touchstart',e=>{if(e.touches.length===1){const t=e.touches[0];start(t.clientX,t.clientY,'t')}else cancel()},{passive:true});
+  document.addEventListener('touchmove',e=>{if(g&&g.src==='t'){const t=e.touches[0];move(t.clientX,t.clientY,e)}},{passive:false});
+  document.addEventListener('touchend',()=>{if(g&&g.src==='t')end()});
+  document.addEventListener('touchcancel',cancel);
+  document.addEventListener('mousedown',e=>{if(e.button===0&&!('ontouchstart' in window&&e.sourceCapabilities&&e.sourceCapabilities.firesTouchEvents))start(e.clientX,e.clientY,'m')});
+  window.addEventListener('mousemove',e=>{if(g&&g.src==='m')move(e.clientX,e.clientY,e)});
+  window.addEventListener('mouseup',()=>{if(g&&g.src==='m')end()});
+  /* chặn click "lọt" sau khi kéo bằng chuột */
+  window.addEventListener('click',e=>{if(Date.now()-NAV.justSwiped<350){e.stopPropagation();e.preventDefault()}},true);
+})();
+/*NAVJS-END*/
+
 render(false);
+try{const q=new URLSearchParams(location.search).get('opt')||(location.hash.match(/opt=?(\d)/)||[])[1];if(q==='2')setOpt(2)}catch(_){}
+navPush();
 })();
 </script>
 
