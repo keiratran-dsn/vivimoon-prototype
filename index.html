@@ -3288,8 +3288,6 @@ function p1D(){
       <div class="p1-price" id="p1price">${vnd(pUnit()*1)}<small>/ ${q.mode==='doi'?'đôi':'chiếc'}</small>${p.sale?`<span class="sale">-${p.sale}%</span>`:''}</div>
       <div class="p1-promos"><span>${I('tag','s16')}Giảm 30K đơn đầu tiên · nhập NEW30</span><span>${I('gift','s16')}Lens khoá ẩm tặng Kits Yêu Mắt</span><span>${I('truck','s16')}Freeship từ 600K</span></div>
       <div class="p1-comfort"><div class="h">Độ thoải mái khi đeo<button class="c1-link" data-act="na">Vì sao lens êm?</button></div><div class="g"><div><i>${I('drop','s16')}</i><span><small>Độ ngậm nước</small><b>${pWater(p)}</b></span></div><div><i>${I('clock','s16')}</i><span><small>Đeo tới</small><b>${pHours(p)}</b></span></div><div><i>${I('eye','s16')}</i><span><small>Mắt nhạy cảm</small><b>Phù hợp</b></span></div></div></div>
-      <div class="p1-lb">Màu sắc: <b style="margin-right:auto;margin-left:6px">${p.nm}</b></div>
-      <div class="p1-sw">${sw.map(s=>`<button class="${s[0]===p.id?'on':''}" style="background:${s[1]}" data-act="p1go" data-v="${s[0]}" aria-label="${byId[s[0]].nm}" title="${byId[s[0]].nm}"></button>`).join('')}</div>
       <div class="p1-lb">Hạn sử dụng</div><div class="p1-pills"><button class="on" aria-pressed="true">${p.dur}</button>${['1 ngày','1 tháng','3 tháng','6 tháng'].filter(d=>d!==p.dur).slice(0,1).map(d=>`<button disabled title="Mẫu này không có bản ${d}">${d}</button>`).join('')}</div><button class="c1-link p1-mini" data-act="preset" data-k="dur" data-v="${p.dur}">Mẫu này chỉ có bản ${p.dur} · xem lens ${p.dur} khác</button>
       <div class="p1-lb">Mua theo</div><div class="p1-pills" role="radiogroup"><button class="${q.mode==='chiec'?'on':''}" data-act="p1mode" data-v="chiec" role="radio" aria-checked="${q.mode==='chiec'}">1 chiếc (1 bên mắt)</button><button class="${q.mode==='doi'?'on':''}" data-act="p1mode" data-v="doi" role="radio" aria-checked="${q.mode==='doi'}">1 đôi (2 bên mắt)</button></div>
       <div class="p1-lb">Độ cận<button class="c1-link" data-act="na" style="text-decoration:none;display:inline-flex;gap:6px;color:var(--n01)">${I('info','s16')}Hướng dẫn chọn độ</button></div>
@@ -3790,8 +3788,8 @@ function plp(){
 function pdpImgs(p){const a=[im2(p,'eye'),im2(p,'img'),{src:'o2_comfort.jpg',cls:''},{src:'o2_mk2.jpg',cls:''},im2(p,'lens')];return a}
 function optBlock(st,ctx){
   const p=byId[st.id];
-  return `<div class="lb">Màu sắc: <b style="margin-right:auto;margin-left:6px">${p.nm}</b></div>
-  <div class="sws">${SW.map(s=>`<button class="${s[0]===st.id?'on':''}" style="background:${s[1]}" data-act="o2sw" data-c="${ctx}" data-v="${s[0]}" aria-label="${byId[s[0]].nm}" title="${byId[s[0]].nm}"></button>`).join('')}</div>
+  return `${ctx==='pdp'?'':`<div class="lb">Màu sắc: <b style="margin-right:auto;margin-left:6px">${p.nm}</b></div>
+  <div class="sws">${SW.map(s=>`<button class="${s[0]===st.id?'on':''}" style="background:${s[1]}" data-act="o2sw" data-c="${ctx}" data-v="${s[0]}" aria-label="${byId[s[0]].nm}" title="${byId[s[0]].nm}"></button>`).join('')}</div>`}
   <div class="lb">Hạn sử dụng</div><div class="pills"><button class="pill2 on">${p.dur}</button><span class="lnk" style="font-size:11px;color:var(--grey)">Mẫu này chỉ có bản ${p.dur}</span></div>
   <div class="lb">Mua theo</div><div class="pills"><button class="pill2 ${st.mode==='chiec'?'on':''}" data-act="o2mode" data-c="${ctx}" data-v="chiec">1 chiếc (1 bên mắt)</button><button class="pill2 ${st.mode==='doi'?'on':''}" data-act="o2mode" data-c="${ctx}" data-v="doi">1 đôi (2 bên mắt)</button></div>
   <div class="lb">Độ cận<button class="lnk" data-act="na" style="font-size:12px;color:var(--ink);display:flex;gap:4px;align-items:center">ⓘ Hướng dẫn chọn độ</button></div>
